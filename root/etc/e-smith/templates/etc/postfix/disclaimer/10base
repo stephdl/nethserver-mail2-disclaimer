@@ -27,6 +27,7 @@ cat >in.$$ || { echo Cannot save mail to file; exit $EX_TEMPFAIL; }
 # obtain From domain
 from_address=`grep "From:" in.$$ | cut -d "<" -f 2 | cut -d ">" -f 1 | cut -d "@" -f 2`
 EOF
+;
 
 foreach my $domain ($d->get_all_by_prop('type' => 'domain')) {
     $i++;
